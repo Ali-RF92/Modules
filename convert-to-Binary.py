@@ -48,8 +48,15 @@ def block_creator(binary_code):
     return block
 
 
+# convert binary to string
+binary_str = ""
 for i in range(len(binary_rep)):
-    binary_rep[i] = block_creator(binary_rep[i])
+    _list = block_creator(binary_rep[i]).flatten(order="F")
+    _list = _list.tolist()
+    binary_str += "".join([str(i) for i in _list])
 
 
-print(binary_rep)
+
+
+
+print(binary_str)
