@@ -42,6 +42,9 @@ def block_creator(binary_code):
     if (np.count_nonzero(block[2]) + np.count_nonzero(block[3])) % 2:
         block[2][0] = 1
 
+    if np.count_nonzero(block)%2:
+        block[0][0] = 1
+
     return block
 
 
