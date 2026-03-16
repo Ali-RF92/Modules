@@ -56,7 +56,8 @@ for i in range(len(binary_rep)):
     binary_str += "".join([str(i) for i in _list])
 
 
-
-
-
 print(binary_str)
+
+# save txt file
+with open("data.txt", "w") as fi:
+    fi.write(binary_str)
